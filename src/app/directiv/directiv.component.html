@@ -1,0 +1,66 @@
+<p>directiv works!</p>
+
+<h3>Angular Directives</h3>
+
+<h4>1. Structural Directives </h4>
+<!-- 1 *ngIf -->
+<p *ngIf="showFlag && (age > 18)">{{showText}}</p>
+
+<!-- <p>Hello Angular</p> -->
+
+<!-- 2. *ngFor -->
+
+<select class="form-control" [(ngModel)]="selectedCountry">
+    <option *ngFor="let cnt of country">{{cnt}}</option>
+</select>
+
+<table class="table table-responsive">
+    <tr>
+        <td *ngFor="let cnt of country">{{cnt}}</td>
+    </tr>
+</table>
+
+<!-- 3. *ngSwitch -->
+
+<!-- <div [ngSwitch]="state">
+    <div *ngSwitchCase ="KA" >Karnatak </div>
+     <div *ngSwitchCase="MP" >MP</div>
+     <div *ngSwitchCase ="MH">Maharashatra</div>
+</div> -->
+
+<!-- <div [ngSwitch]="state">
+    <p *ngSwitchCase="KA">Karnataka</p>
+    <p *ngSwitchDefault> This is the default state</p>
+</div> -->
+
+
+
+<h4>2. Attribute Directives </h4>
+<!-- 1. ngClass -->
+
+<p class="testClass">This is p tag with normal class</p>
+
+<p [ngClass]="testClass1">This is p tag with  NgClass</p>
+
+<p [ngClass]="(!showFlag && age > 18) ? 'test1' :'test2'">This is p tag with  NgClass and ternory operator</p>
+
+
+<!-- 2. ngStyle -->
+<p style="color:red">This is p tag with normal style</p>
+
+<p [ngStyle]="{'color':'red'}">This is p tag with Ngstyle</p>
+
+<p [ngStyle]="testStyle1">This is p tag with Ngstyle</p>
+
+<p [ngStyle]="showFlag ? testStyle2 :testStyle3">This is p tag with Ngstyle and ternory operator</p>
+
+
+
+
+
+
+
+
+
+
+
